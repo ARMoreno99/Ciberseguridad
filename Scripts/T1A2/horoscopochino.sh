@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ $# -ne 0 ];then
+
+	echo "No introducir ningun parametro"
+else
+
 read -p "Introduce una fecha: " fecha
 
 let chino=$fecha%12
@@ -30,4 +35,5 @@ elif [ $chino == 11 ];then
 	echo "El animal es CABRA"
 else
 	"No has introducido una fecha valida"
+fi
 fi

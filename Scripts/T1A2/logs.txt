@@ -1,0 +1,2 @@
+uid=1000(alejandro) gid=1000(alejandro) grupos=1000(alejandro)
+id: «test»: no existe ese usuario
