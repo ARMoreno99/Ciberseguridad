@@ -57,7 +57,7 @@ function alta(){
 	read -p "Introduce el DNI del usuario: " dni
 
 	existe
-	#“INSERTADO Jesus:Rodriguez:Lopez:45678912z:jrodlop912 el 05122021 a las 16:52h”
+	#INSERTADO Nombre:Apellido:Apellido_Usuario el 05/12/2021 a las 16:52h
 	echo "[+] INSERTADO: $nombre:$apellido1:$apellido2:$dni:$(echo $nombre | head -c1 | tr '[:upper:]' '[:lower:]' ; echo $apellido1 | head -c3 | tr '[:upper:]' '[:lower:]' ; echo $apellido2 | head -c3 | tr '[:upper:]' '[:lower:]' ; echo $dni | tail -c5 | head -c3) a las $(date +%H:%M:%S_%d/%m/%Y)" >> logs.log
 
 	repetir
@@ -70,6 +70,8 @@ function baja(){
 	clear
 	echo -e "\n[*] Baja de usuario\n"	
 	read -p "Introduce un usuario: " user
+	
+	#BORRADO Nombre:Apellido:Apellido_Usuario el 05/12/2021 a las 16:52h
 	echo "[!] BORRADO: $(grep $user usuarios.csv) a las $(date +%H:%M:%S_%d/%m/%Y)" >> logs.log
 	grep -wv $user usuarios.csv 2>/dev/null | sponge usuarios.csv
 	echo -e "\n[!] Usuario $user borrado\n"
