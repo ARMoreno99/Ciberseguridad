@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Fecha 14/12/2021
+# Autor: Alejandro Rodriguez
+# Curso de Especalizacion de Ciberseguridad 
+
+
 tput civis # Ocultar Cursos
 
 	## Funciones ##
